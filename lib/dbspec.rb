@@ -1,5 +1,15 @@
 require "dbspec/version"
+require "dbspec/configuration"
+require "dbspec/connection"
 
 module Dbspec
-  # Your code goes here...
+  class << self
+    def configuration
+      @configuration ||= Dbspec::Configuration.new
+    end
+
+    def connection
+      @connection ||= Dbspec::Connection.new
+    end
+  end
 end
