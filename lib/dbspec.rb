@@ -1,4 +1,6 @@
 require "dbspec/version"
+require "dbspec/table"
+require "dbspec/column"
 require "dbspec/configuration"
 require "dbspec/connection"
 require "dbspec/helper/set"
