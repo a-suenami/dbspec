@@ -9,5 +9,10 @@ module Dbspec
         Dbspec::Column.new(name)
       end
     end
+
+    def has_column?(column_name)
+      column = @columns.find{ |c| c.name == column_name.to_s }
+      not column.nil?
+    end
   end
 end

@@ -12,4 +12,12 @@ describe Dbspec::Table do
       expect(subject.first.name).to eq "column_name"
     end
   end
+
+  describe "#has_column?" do
+    context "when specified column exists" do
+      it "should return true" do
+        expect(table).to have_column(:column_name)
+      end
+    end
+  end
 end
