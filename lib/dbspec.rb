@@ -1,6 +1,9 @@
 require "dbspec/version"
 require "dbspec/configuration"
 require "dbspec/connection"
+require "dbspec/helper/set"
+
+include Dbspec::Helper::Set
 
 module Dbspec
   class << self
